@@ -36,6 +36,6 @@ while True:
     Earth.pos = Earth.pos + epsilon*Earth.velocity
     r = mag(Earth.pos) 
     Earth.acceleration=-G*M*Earth.pos/(r**3)
-    Earth.velocity= Earth.velocity + epsilon *Earth.acceleration
+    Earth.velocity= Earth.velocity + (epsilon/2.0) *Earth.acceleration
     Earth.rotate(angle = n , axis = vec(0,1,1))
     n+=0.00001*pi
